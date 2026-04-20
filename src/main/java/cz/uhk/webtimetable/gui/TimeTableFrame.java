@@ -3,6 +3,7 @@ package cz.uhk.webtimetable.gui;
 import cz.uhk.webtimetable.model.LocationTimeTable;
 import cz.uhk.webtimetable.utils.ITimeTableProvider;
 import cz.uhk.webtimetable.utils.MockTimeTableProvider;
+import cz.uhk.webtimetable.utils.StagTimeTableProvider;
 
 
 import javax.swing.*;
@@ -11,11 +12,10 @@ import javax.swing.table.TableModel;
 import java.awt.*;
 
 public class TimeTableFrame extends JFrame {
-    private ITimeTableProvider timetableProvider = new MockTimeTableProvider();
+    private ITimeTableProvider timetableProvider = new StagTimeTableProvider();
     private LocationTimeTable timetable;
     private JTable tabTimetable;
     private TimeTableModel timeTableModel;
-
     public TimeTableFrame() {
         super("Location TimeTable");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -36,10 +36,16 @@ public class TimeTableFrame extends JFrame {
         public int getRowCount() {
             return timetable.getActivities().size();
         }
+        private static final String[] colNames = {"ID","NAZEV","UCITEL","TYP","DEN","ZACATEK","KONEC"};
+        @Override
+        public String getColumnName(int column) {
+            return colNames[column];
+        }
 
         @Override
         public int getColumnCount() {
             return 7; //change later if more models
+
         }
 
         @Override

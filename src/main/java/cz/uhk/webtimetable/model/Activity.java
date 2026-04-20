@@ -1,5 +1,7 @@
 package cz.uhk.webtimetable.model;
 
+import com.google.gson.annotations.SerializedName;
+
 import javax.xml.crypto.Data;
 import java.time.LocalTime;
 
@@ -8,13 +10,21 @@ import java.time.LocalTime;
  */
 public class Activity {
     /** Module abbreviation, ie ZMAT2, PRO1 etc. */
+    @SerializedName("predmet")
     private String id;
     /** Full name of the module */
+    @SerializedName("nazev")
     private String name;
+    @SerializedName("vsichniUciteleJmenaTituly")
     private String teacher;
+    @SerializedName("den")
     private String day;
+    @SerializedName("typAkce")
     private String type;
-    private LocalTime start,end;
+    @SerializedName("hodinaSkutOd")
+    private LocalTime start;
+    @SerializedName("hodinaSkutDo")
+    private LocalTime end; //transient -> neserealizace jsonu
 
     public Activity() {
     }
