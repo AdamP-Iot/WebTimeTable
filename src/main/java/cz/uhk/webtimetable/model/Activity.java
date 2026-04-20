@@ -19,16 +19,6 @@ public class Activity {
     public Activity() {
     }
 
-    public Activity(String id, String name, String teacher, String day, String type, LocalTime start, LocalTime end) {
-        this.id = id;
-        this.name = name;
-        this.teacher = teacher;
-        this.day = day;
-        this.type = type;
-        this.start = start;
-        this.end = end;
-    }
-
     public String getId() {
         return id;
     }
@@ -84,7 +74,15 @@ public class Activity {
     public void setEnd(LocalTime end) {
         this.end = end;
     }
-
+    public Activity(String id, String name, String teacher, String day, String type, LocalTime start, LocalTime end) {
+        this.id = id;
+        this.name = name;
+        this.teacher = teacher;
+        this.day = day;
+        this.type = type;
+        this.start = start;
+        this.end = end;
+    }
     @Override
     public String toString() {
         return "Activity{" +
