@@ -13,6 +13,7 @@ import com.google.gson.Gson;
 
 public class StagTimeTableProvider implements ITimeTableProvider {
     private static final String STAG_URL = "https://stag-demo.uhk.cz/ws/services/rest2/rozvrhy/getRozvrhByMistnost?semestr=LS&budova=%s&mistnost=%s&outputFormat=JSON"; //konstanta takže staci a final, %s pro změnu, LS
+
     private final Gson gson;
 
     public StagTimeTableProvider() {
