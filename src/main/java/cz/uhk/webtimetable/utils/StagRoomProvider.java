@@ -11,6 +11,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 
+//to read from url
 public class StagRoomProvider {
 
     private static final String STAG_URL = "https://stag-demo.uhk.cz/ws/services/rest2/mistnost/getMistnostiInfo?zkrBudovy=%25&pracoviste=%25&typ=U&outputFormat=JSON&cisloMistnosti=%25";

@@ -1,5 +1,5 @@
 package cz.uhk.webtimetable.model;
-
+//contents of json
 public class Room {
     private String zkrBudovy;
     private String cisloMistnosti;

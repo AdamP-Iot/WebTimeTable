@@ -8,6 +8,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+//list of json
 public class RoomData {
     @SerializedName("mistnostInfo")
     private List<Room> roomList = new ArrayList<>();

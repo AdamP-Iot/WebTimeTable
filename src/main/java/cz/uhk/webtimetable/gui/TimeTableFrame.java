@@ -57,8 +57,8 @@ public class TimeTableFrame extends JFrame {
                 buildings.add(building);
             }
         }
-        for(String building : buildings){
-            comboboxBuilding.addItem(building);
+        for(String b : buildings){
+            comboboxBuilding.addItem(b);
         }
 
         repaint();
