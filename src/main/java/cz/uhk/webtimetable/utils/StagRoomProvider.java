@@ -13,7 +13,7 @@ import java.util.List;
 
 public class StagRoomProvider {
 
-    private static final String STAG_URL = "https://stag-demo.uhk.cz/ws/services/rest2/mistnost/getMistnostiInfo?zkrBudovy=%s&pracoviste=%s&typ=U&outputFormat=JSON&cisloMistnosti=%s";
+    private static final String STAG_URL = "https://stag-demo.uhk.cz/ws/services/rest2/mistnost/getMistnostiInfo?zkrBudovy=%25&pracoviste=%25&typ=U&outputFormat=JSON&cisloMistnosti=%25";
     private final Gson gson;
 
     public StagRoomProvider() {
